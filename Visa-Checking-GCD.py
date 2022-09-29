@@ -12,8 +12,8 @@ import requests
 def Get_visa_info():
         
     cookies = {
-        'LB': '629938860.24615.0000',
-        'PD-S-SESSION-ID': '5Vv70Vb67lWRWYSGnk0fKA==:1_2_1_vdnORUSekwjhvLWAtWhE2d4aU+ClGKFsd9oPZtuJPRqOF+AI|',
+        'LB': '{}',
+        'PD-S-SESSION-ID': '{}',
     }
     headers = {
     'Connection': 'keep-alive',
@@ -31,7 +31,7 @@ def Get_visa_info():
     'Referer': 'https://online.immi.gov.au/lusc/login',
     'Accept-Language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7,zh-TW;q=0.6',
     # Requests sorts cookies= alphabetically
-    # 'Cookie': 'LB=629938860.24615.0000; PD-S-SESSION-ID=5Vv70Vb67lWRWYSGnk0fKA==:1_2_1_vdnORUSekwjhvLWAtWhE2d4aU+ClGKFsd9oPZtuJPRqOF+AI|',
+    # 'Cookie': '{}',
     }
 
     response = requests.get('https://online.immi.gov.au/ola/app', cookies=cookies, headers=headers)
@@ -142,7 +142,5 @@ def Schedule_email():
         server.login(sender_email, password)
         server.sendmail(sender_email, receiver_email, msg.as_string())
 
-
-
-
+        
 Schedule_email()
